@@ -50,17 +50,12 @@ class InstallCommand extends Command
         $this->info('🚀 Next steps:');
         $this->info('1. Run: php artisan migrate');
         $this->info('2. Add the HasRoles trait to your User model');
-        $this->info('3. Register the service provider in config/app.php:');
-        $this->info('   App\\Providers\\RoleManagerApplicationServiceProvider::class,');
-        $this->info('4. Customize authorization in app/Providers/RoleManagerApplicationServiceProvider.php');
-        $this->info('5. Visit /admin/roles to start managing roles and permissions');
+        $this->info('3. Visit /role-manager to start managing roles and permissions');
         $this->info('');
         $this->info('💡 Authorization options:');
         $this->info('   • Config-based: Edit config/role-manager.php');
         $this->info('   • Email whitelist: Edit the service provider');
-        $this->info('   • Custom logic: Use RoleManager::authorization() callback');
-        $this->info('');
-        $this->info('💡 No build process required! Assets are pre-compiled with Vite.');
+        $this->info('   • Custom logic: Use custom callback');
     }
 
     protected function isPackageInstalled($package)
