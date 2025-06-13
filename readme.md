@@ -11,7 +11,7 @@ A comprehensive Laravel package for managing roles and permissions with a beauti
 - 📊 **Dashboard Overview** - Get insights into your authorization system
 - 🔍 **Search & Filter** - Find roles, permissions, and users quickly
 - 📱 **Responsive Design** - Works perfectly on desktop and mobile
-- ⚡ **Powered by Inertia.js** - Seamless SPA experience
+- ⚡ **Powered by Spatie's Laravel Permission Package** - Seamless experience
 - 🚀 **Easy Installation** - One command setup with automatic configuration
 
 ## Requirements
@@ -20,7 +20,6 @@ A comprehensive Laravel package for managing roles and permissions with a beauti
 - Laravel 10.0+
 - Node.js & NPM
 - Vue 3
-- Inertia.js
 
 ## Installation
 
@@ -90,7 +89,7 @@ return [
     | Route Configuration
     |--------------------------------------------------------------------------
     */
-    'route_prefix' => 'admin/roles',
+    'route_prefix' => 'role-manager',
     
     'middleware' => ['web', 'auth'],
 
@@ -299,7 +298,7 @@ php artisan vendor:publish --tag=role-manager-views
 You can customize the route prefix and middleware in the configuration file:
 
 ```php
-'route_prefix' => 'admin/roles',
+'route_prefix' => 'role-manager',
 'middleware' => ['web', 'auth', 'role:admin'],
 ```
 
