@@ -1,0 +1,55 @@
+{
+  "name": "abdallahk/laravel-role-manager",
+  "description": "A Laravel package for managing roles and permissions with Vue 3 UI built on top of Spatie Laravel Permission",
+  "type": "library",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Abdallah K"
+    }
+  ],
+  "require": {
+    "php": "^8.2",
+    "laravel/framework": "^10.0|^11.0|^12.0",
+    "spatie/laravel-permission": "^6.0"
+  },
+  "require-dev": {
+    "orchestra/testbench": "^8.0|^9.0|^10.0",
+    "phpunit/phpunit": "^10.0|^11.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "AbdallahK\\LaravelRoleManager\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "AbdallahK\\LaravelRoleManager\\Tests\\": "tests/"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "AbdallahK\\LaravelRoleManager\\LaravelRoleManagerServiceProvider"
+      ]
+    }
+  },
+  "scripts": {
+    "build-assets": [
+      "npm install",
+      "npm run build"
+    ],
+    "dev-assets": [
+      "npm install", 
+      "npm run dev"
+    ],
+    "post-install-cmd": [
+      "@build-assets"
+    ],
+    "post-update-cmd": [
+      "@build-assets"
+    ]
+  },
+  "minimum-stability": "stable",
+  "prefer-stable": true
+}
