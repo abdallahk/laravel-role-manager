@@ -38,20 +38,11 @@ php artisan role-manager:install
 This command will:
 - Publish configuration files
 - Publish Vue components and assets
-- Install required NPM dependencies
-- Set up Tailwind CSS configuration
-- Configure Vite for Vue 3
 
 Run the migrations:
 
 ```bash
 php artisan migrate
-```
-
-Install and compile assets:
-
-```bash
-npm install && npm run dev
 ```
 
 ## Configuration
@@ -362,7 +353,7 @@ The MIT License (MIT). Please see [License File](LICENSE.md) for more informatio
 ## Credits
 
 - Built on top of [Spatie Laravel Permission](https://spatie.be/docs/laravel-permission)
-- Vue 3 and Inertia.js for the frontend
+- Vue 3 for the frontend
 - Tailwind CSS for styling
 - Laravel framework
 
